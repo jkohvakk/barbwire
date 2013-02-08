@@ -4,7 +4,7 @@ Resource    structure.txt
 
 *** Keywords ***
 Client sends simple message to server
-    Simple message     
+    Load template    Simple message     
     Value    payload_u32    0x12345678
     Client sends message  
     

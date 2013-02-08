@@ -17,6 +17,8 @@ Connect client and server
     Start udp client    name=UdpClient    protocol=${PROTOCOL}    timeout=1
     Start udp server    ${SERVER}    ${SERVER PORT}    name=UdpServer    protocol=${PROTOCOL}    timeout=1
     Connect    ${SERVER}   ${SERVER PORT}  name=UdpClient
+    Create message template for simple message
+
     
     
     

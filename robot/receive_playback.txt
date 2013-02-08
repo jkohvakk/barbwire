@@ -8,7 +8,8 @@ Suite teardown   Reset Rammbock
 Receive playback
     Define barber protocol
     Start udp server    ${SERVER}    ${SERVER PORT}    name=UdpServer    protocol=${PROTOCOL}    timeout=200
-    Simple message
+    Create message template for simple message
+    Load template    Simple message
     Server receives message
     
     

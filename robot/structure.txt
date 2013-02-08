@@ -14,6 +14,7 @@ Define barber protocol
     End protocol
 
 
-Simple message
+Create message template for simple message
     New message   Simple message  ${PROTOCOL}  header:msg_id:0xcafebabe
     u32    payload_u32
+    Save template    Simple message
