@@ -1,0 +1,19 @@
+*** Variables ***
+${SERVER}=        localhost
+${SERVER PORT}=   55555 
+${PROTOCOL}=      barber
+
+
+*** Keywords ***
+Define barber protocol
+    New protocol    barber
+    u32        flags    0
+    u32        msg_id
+    u32        length
+    pdu        length-12
+    End protocol
+
+
+Simple message
+    New message   Simple message  ${PROTOCOL}  header:msg_id:0xcafebabe
+    u32    payload_u32

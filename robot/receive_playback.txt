@@ -1,0 +1,15 @@
+*** Settings ***
+Library          Rammbock
+Resource         structure.txt
+Suite teardown   Reset Rammbock
+
+
+*** Test cases ***
+Receive playback
+    Define barber protocol
+    Start udp server    ${SERVER}    ${SERVER PORT}    name=UdpServer    protocol=${PROTOCOL}    timeout=200
+    Simple message
+    Server receives message
+    
+    
+    
