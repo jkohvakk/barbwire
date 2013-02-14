@@ -1,0 +1,26 @@
+*** Settings ***
+Library          Rammbock
+Resource         defaults.txt
+Suite setup      Connect client and server
+Suite teardown   Reset Rammbock
+
+
+*** Test cases ***
+Send and receive simple message
+    Client sends simple message to server
+    Server receives message
+    Client sends message with two parameters to server
+    Server receives message
+    
+    
+*** Keywords ***
+Connect client and server
+    Define barber protocol
+    Start udp client    name=UdpClient    protocol=${PROTOCOL}    timeout=1
+    Start udp server    ${SERVER}    ${SERVER PORT}    name=UdpServer    protocol=${PROTOCOL}    timeout=1
+    Connect    ${SERVER}   ${SERVER PORT}  name=UdpClient
+    Create message templates
+
+    
+    
+    
