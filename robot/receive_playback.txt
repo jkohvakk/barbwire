@@ -1,5 +1,5 @@
 *** Settings ***
-Library          Rammbock
+Library          ../src/RammbockMonitor.py
 Resource         structure.txt
 Suite teardown   Reset Rammbock
 
@@ -8,9 +8,9 @@ Suite teardown   Reset Rammbock
 Receive playback
     Define barber protocol
     Start udp server    ${SERVER}    ${SERVER PORT}    name=UdpServer    protocol=${PROTOCOL}    timeout=200
-    Create message template for simple message
-    Load template    Simple message
-    Server receives message
+    Create message templates
+    Server monitors message
+    Server monitors message
     
     
     

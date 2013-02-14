@@ -6,5 +6,11 @@ Resource    structure.txt
 Client sends simple message to server
     Load template    Simple message     
     Value    payload_u32    0x12345678
-    Client sends message  
+    Client sends message
+    
+Client sends message with two parameters to server
+    Load template    Two parameters
+    Value    payload_1     0xb00bd00d
+    Value    payload_2     0xf00dd00d
+    Client sends message
     

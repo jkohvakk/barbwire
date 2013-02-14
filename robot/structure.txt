@@ -13,8 +13,18 @@ Define barber protocol
     pdu        length-12
     End protocol
 
-
-Create message template for simple message
+Create message templates
+    Create template for simple message
+    Create template for two parameter message
+    
+Create template for simple message
     New message   Simple message  ${PROTOCOL}  header:msg_id:0xcafebabe
     u32    payload_u32
     Save template    Simple message
+
+Create template for two parameter message
+    New message   Two parameters  ${PROTOCOL}  header:msg_id:0xb00bd00d
+    u32    payload_1
+    u32    payload_2
+    Save template    Two parameters
+    
