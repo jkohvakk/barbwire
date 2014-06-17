@@ -1,3 +1,6 @@
+*** Settings ***
+Documentation     Testing if editing in Github really works.
+
 *** Variables ***
 ${SERVER}=        localhost
 ${SERVER PORT}=   55555 
